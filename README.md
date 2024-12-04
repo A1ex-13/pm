@@ -18,8 +18,8 @@ def find_postal_code(input_str, regions):
     return best_match[2] if similarity(input_str, best_match[0]) > 0.75 else "800"
 
 # Основной код
-url = "https:///re.csv"
-regions = load_regions_from_github(url)[1:]  # Пропуск заголовка
+url = "https://github.com/A1ex-13/pm/re.csv"
+regions = load_regions_from_github(url)[0:]  
 while True:
     query = input("Введите регион: ").strip()
     if query.lower() == 'exit': break
